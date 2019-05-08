@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/kaixuan1992/react-UI/issues"
   },
-  "homepage": "https://github.com/kaixuan1992/react-UI#readme"
+  "homepage": "https://github.com/kaixuan1992/react-UI#readme",
+  "devDependencies": {
+    "awesome-typescript-loader": "^5.2.1",
+    "typescript": "^3.4.5",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3"
+  }
 }
