@@ -17,7 +17,7 @@ module.exports = {//node.js模块定义，导出一个对象
                 loader: 'awesome-typescript-loader'//将typescript 解析成js
             }
         ]
-    },//生成编译后的脚本引入<script src="./dist/lib/index.js"></script>
+    },//生成脚本引入<script src="./dist/lib/index.js"></script>
     plugins: [
         new HtmlWebpackPlugin({
             template: 'index.html'
