@@ -1,7 +1,5 @@
 const path = require('path')//引入node path模块
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {//node.js模块定义，导出一个对象
-    mode: 'production',//开发 还是再发布 （发布）生产模式
     entry: {//程序入口index 对应文件路径
         index: './lib/index.tsx'
     },
@@ -17,25 +15,5 @@ module.exports = {//node.js模块定义，导出一个对象
                 loader: 'awesome-typescript-loader'//将typescript 解析成js
             }
         ]
-    },//生成脚本引入<script src="./dist/lib/index.js"></script>
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: 'index.html'
-        })
-    ],
-    //外部库 从源代码排出去
-    externals: {
-        react: {
-            commonjs: 'react',
-            commonjs2: 'react',
-            amd: 'react',
-            root: 'React',
-        },
-        'react-dom': {
-            commonjs: 'react-dom',
-            commonjs2: 'react-dom',
-            amd: 'react-dom',
-            root: 'ReactDOM',
-        },
     }
  } 
