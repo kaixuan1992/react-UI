@@ -3,6 +3,9 @@ module.exports = {//node.js模块定义，导出一个对象
     entry: {//程序入口index 对应文件路径
         index: './lib/index.tsx'
     },
+    resolve: {
+        extensions: ['.ts', '.tsx', '.js', '.jsx'],
+    },
     output: {//输出/引入path，处理不同操作系统 根目录问题 window \\dist mac linux /dist
         path: path.resolve(__dirname, 'dist/lib'),
         library: 'FUI',
