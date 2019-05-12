@@ -22,5 +22,20 @@ module.exports = {//node.js模块定义，导出一个对象
         new HtmlWebpackPlugin({
             template: 'index.html'
         })
-    ]
+    ],
+    //外部库 从源代码排出去
+    externals: {
+        react: {
+            commonjs: 'react',
+            commonjs2: 'react',
+            amd: 'react',
+            root: 'React',
+        },
+        'react-dom': {
+            commonjs: 'react-dom',
+            commonjs2: 'react-dom',
+            amd: 'react-dom',
+            root: 'ReactDOM',
+        },
+    }
  } 
