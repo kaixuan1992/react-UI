@@ -8,7 +8,7 @@ module.exports = {//node.js模块定义，导出一个对象
     },
     output: {//输出/引入path，处理不同操作系统 根目录问题 window \\dist mac linux /dist
         path: path.resolve(__dirname, 'dist/lib'),
-        library: 'FUI',
+        library: 'RUI',
         libraryTarget: 'umd',//库的格式，告诉webpack需要把代码封装成什么样的模块定义 commonjs amd 兼容最强
     },
     module: {//如何解释tsx
@@ -16,7 +16,11 @@ module.exports = {//node.js模块定义，导出一个对象
             {
                 test: /\.tsx?$/,//如何知道某个文件是tsx x可有可无以以此结尾
                 loader: 'awesome-typescript-loader'//将typescript 解析成js
-            }
+            },
+            {
+                test: /\.svg$/,
+                loader: 'svg-sprite-loader',
+              },
         ]
     }
  } 
