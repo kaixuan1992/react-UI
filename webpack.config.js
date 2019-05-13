@@ -21,6 +21,10 @@ module.exports = {//node.js模块定义，导出一个对象
                 test: /\.svg$/,
                 loader: 'svg-sprite-loader',
               },
+              {
+                test: /\.scss$/,
+                use: ['style-loader', 'css-loader', 'sass-loader']
+              }
         ]
     }
  } 
