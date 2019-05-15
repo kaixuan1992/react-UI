@@ -3,11 +3,12 @@ import React from 'react';
 // import Button from './button';
 import Icon from './icon'
   
+const fn = ()=>{
+  console.log('fn')
+}
 ReactDOM.render(
   <div>
-    <Icon name="wechat"/>
-    <Icon name="alipay"/>
-    <Icon name="icon_QQ"/>
+    <Icon name="wechat"onClick={fn}/>
   </div>
 ,document.querySelector('#root')
 )
