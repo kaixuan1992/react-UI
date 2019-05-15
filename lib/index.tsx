@@ -3,12 +3,18 @@ import React from 'react';
 // import Button from './button';
 import Icon from './icon'
   
-const fn = ()=>{
-  console.log('fn')
+const fn: React.MouseEventHandler=(e)=>{
+  console.log(e.target)
 }
 ReactDOM.render(
   <div>
-    <Icon name="wechat"onClick={fn}/>
+    <Icon name="wechat" 
+    className="wec"
+    onClick={fn}
+    onMouseEnter={()=>console.log('enter')}
+    onMouseLeave={()=>console.log('leave')}
+    onTouchStart={()=>console.log('touch')}
+    />
   </div>
 ,document.querySelector('#root')
 )
