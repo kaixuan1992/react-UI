@@ -1,11 +1,9 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-console.log(React,"React")
-console.log(ReactDOM,"ReactDOM")
+import React from 'react';
+
 function Button() {
-    return (
-        <div>button</div>
-    )
+  return (
+    <div>button2</div>
+  );
 }
 
-export default Button
+export default Button;
