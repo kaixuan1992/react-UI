@@ -5,7 +5,6 @@ module.exports = {
   clearMocks: false,
   collectCoverage: true,
   reporters: ["default"],
-  reporters: ["default","just-junit"],
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],
   moduleDirectories: ['node_modules'],
   globals: {
